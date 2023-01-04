@@ -35,11 +35,17 @@ if (tipoCambio == 2) {
 
 var total = 0;
 
-if (numOperacion == 1) {
-  total = precio * 1.75;
-}
-if (numOperacion == 2) {
-  total = precio * 2;
+calcImp(precio, numOperacion);
+
+function calcImp(importe, operacion) {
+  if (operacion == 1) {
+    total = importe * 1.75;
+    return total;
+  }
+  if (numOperacion == 2) {
+    total = importe * 2;
+    return total;
+  }
 }
 console.log(total);
 alert("Le llegara al resumen de su tarjeta en pesos argentinos:$" + total);
